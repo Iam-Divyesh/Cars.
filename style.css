@@ -30,7 +30,7 @@ body{
     color: #222;
     text-decoration: none;
     font-weight: 600;
-    opacity: 0;
+    /* opacity: 0; */
     animation: slideRight 1s ease forwards;
 }
  
@@ -41,6 +41,9 @@ body{
     font-weight: 500;
     margin: 0px 20px;
     transition: 3s;
+    /* opacity: 0; */
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(.2s*var(--i));
 }
 
 .navbar a:hover,.navbar a.active{
@@ -163,4 +166,28 @@ body{
     background: #1743e3;
     transform: rotate(45deg);
     z-index: -1;
+}
+
+/* KEYFRAME ANIMATION */
+@keyframe slideRight{
+    0%{
+        transform: traslateX(-100px);
+        opacity:0;
+    }
+}
+    100%{
+        transform: traslateX(0);
+        opacity:1;
+    }
+}
+@keyframe slideTop{
+    0%{
+        transform: traslateY(-100px);
+        opacity:0;
+    }
+}
+    100%{
+        transform: traslateY(0);
+        opacity:1;
+    }
 }
